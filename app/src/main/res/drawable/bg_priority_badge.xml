@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Couleur de fond (sera changée dynamiquement dans le code) -->
+    <solid android:color="@color/priorityMedium" />
+
+    <!-- Coins arrondis -->
+    <corners android:radius="16dp" />
+
+    <!-- Padding interne -->
+    <padding
+        android:left="12dp"
+        android:top="4dp"
+        android:right="12dp"
+        android:bottom="4dp" />
+
+</shape>

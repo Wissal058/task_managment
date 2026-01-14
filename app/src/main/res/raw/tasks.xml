@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+    <task>
+        <id>1</id>
+        <title>Préparer le rapport mensuel</title>
+        <description>Créer le rapport des activités du mois de janvier avec les statistiques de ventes et les objectifs atteints</description>
+        <assignedTo>2</assignedTo>
+        <createdBy>1</createdBy>
+        <status>PENDING</status>
+        <priority>HIGH</priority>
+        <createdDate>1704067200000</createdDate>
+        <dueDate>1704672000000</dueDate>
+    </task>
+
+    <task>
+        <id>2</id>
+        <title>Mettre à jour la base de données clients</title>
+        <description>Vérifier et mettre à jour toutes les informations des clients dans le système CRM</description>
+        <assignedTo>3</assignedTo>
+        <createdBy>1</createdBy>
+        <status>IN_PROGRESS</status>
+        <priority>MEDIUM</priority>
+        <createdDate>1704153600000</createdDate>
+        <dueDate>1704758400000</dueDate>
+    </task>
+
+    <task>
+        <id>3</id>
+        <title>Organiser la réunion d'équipe</title>
+        <description>Planifier et organiser la réunion hebdomadaire de l'équipe avec l'ordre du jour</description>
+        <assignedTo>2</assignedTo>
+        <createdBy>1</createdBy>
+        <status>COMPLETED</status>
+        <priority>LOW</priority>
+        <createdDate>1704240000000</createdDate>
+        <dueDate>1704412800000</dueDate>
+        <completedDate>1704380000000</completedDate>
+    </task>
+
+    <task>
+        <id>4</id>
+        <title>Corriger les bugs de l'application</title>
+        <description>Résoudre les problèmes signalés par les utilisateurs dans la version 2.1</description>
+        <assignedTo>3</assignedTo>
+        <createdBy>1</createdBy>
+        <status>IN_PROGRESS</status>
+        <priority>URGENT</priority>
+        <createdDate>1704326400000</createdDate>
+        <dueDate>1704499200000</dueDate>
+    </task>
+
+    <task>
+        <id>5</id>
+        <title>Former les nouveaux employés</title>
+        <description>Organiser des sessions de formation pour les nouveaux membres de l'équipe</description>
+        <assignedTo>2</assignedTo>
+        <createdBy>1</createdBy>
+        <status>PENDING</status>
+        <priority>MEDIUM</priority>
+        <createdDate>1704412800000</createdDate>
+        <dueDate>1705017600000</dueDate>
+    </task>
+</tasks>

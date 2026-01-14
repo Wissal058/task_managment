@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <id>1</id>
+        <username>admin</username>
+        <password>admin123</password>
+        <userType>ADMIN</userType>
+        <email>admin@company.com</email>
+        <fullName>Administrateur Principal</fullName>
+        <createdDate>1704067200000</createdDate>
+    </user>
+
+    <user>
+        <id>2</id>
+        <username>employee1</username>
+        <password>emp123</password>
+        <userType>EMPLOYEE</userType>
+        <email>employee1@company.com</email>
+        <fullName>Ahmed Alami</fullName>
+        <createdDate>1704067200000</createdDate>
+    </user>
+
+    <user>
+        <id>3</id>
+        <username>employee2</username>
+        <password>emp123</password>
+        <userType>EMPLOYEE</userType>
+        <email>employee2@company.com</email>
+        <fullName>Fatima Bennani</fullName>
+        <createdDate>1704067200000</createdDate>
+    </user>
+
+    <user>
+        <id>4</id>
+        <username>employee3</username>
+        <password>emp123</password>
+        <userType>EMPLOYEE</userType>
+        <email>employee3@company.com</email>
+        <fullName>Youssef Tazi</fullName>
+        <createdDate>1704153600000</createdDate>
+    </user>
+</users>

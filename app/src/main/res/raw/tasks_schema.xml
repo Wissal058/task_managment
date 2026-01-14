@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Définition de l'élément racine -->
+    <xs:element name="tasks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="task" type="TaskType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Type complexe pour une tâche -->
+    <xs:complexType name="TaskType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="title" type="TitleType"/>
+            <xs:element name="description" type="DescriptionType"/>
+            <xs:element name="assignedTo" type="xs:string"/>
+            <xs:element name="createdBy" type="xs:string"/>
+            <xs:element name="status" type="TaskStatusEnum"/>
+            <xs:element name="priority" type="TaskPriorityEnum"/>
+            <xs:element name="createdDate" type="xs:long"/>
+            <xs:element name="dueDate" type="xs:long"/>
+            <xs:element name="completedDate" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type pour le titre (min 3 caractères, max 200) -->
+    <xs:simpleType name="TitleType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type pour la description (min 10 caractères, max 1000) -->
+    <xs:simpleType name="DescriptionType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10"/>
+            <xs:maxLength value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Énumération des statuts de tâche -->
+    <xs:simpleType name="TaskStatusEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDING"/>
+            <xs:enumeration value="IN_PROGRESS"/>
+            <xs:enumeration value="COMPLETED"/>
+            <xs:enumeration value="CANCELLED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Énumération des priorités de tâche -->
+    <xs:simpleType name="TaskPriorityEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="LOW"/>
+            <xs:enumeration value="MEDIUM"/>
+            <xs:enumeration value="HIGH"/>
+            <xs:enumeration value="URGENT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

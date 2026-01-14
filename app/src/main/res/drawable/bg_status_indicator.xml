@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Couleur de fond (sera changée dynamiquement dans le code) -->
+    <solid android:color="@color/statusPending" />
+
+    <!-- Taille de l'indicateur -->
+    <size
+        android:width="12dp"
+        android:height="12dp" />
+
+</shape>

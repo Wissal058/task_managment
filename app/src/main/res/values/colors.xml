@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleurs principales -->
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <!-- Couleurs de fond -->
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="cardBackground">#FFFFFF</color>
+
+    <!-- Couleurs de texte -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="textHint">#BDBDBD</color>
+    <color name="textWhite">#FFFFFF</color>
+
+    <!-- Couleurs de statut -->
+    <color name="statusPending">#FFC107</color>
+    <color name="statusInProgress">#2196F3</color>
+    <color name="statusCompleted">#4CAF50</color>
+    <color name="statusCancelled">#9E9E9E</color>
+
+    <!-- Couleurs de priorité -->
+    <color name="priorityLow">#4CAF50</color>
+    <color name="priorityMedium">#FFC107</color>
+    <color name="priorityHigh">#FF9800</color>
+    <color name="priorityUrgent">#F44336</color>
+
+    <!-- Couleurs de type d'utilisateur -->
+    <color name="userAdmin">#9C27B0</color>
+    <color name="userEmployee">#3F51B5</color>
+
+    <!-- Autres couleurs -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+
+    <color name="divider">#E0E0E0</color>
+    <color name="shadow">#40000000</color>
+
+    <color name="gradientStart">#667eea</color>
+    <color name="gradientEnd">#764ba2</color>
+    <color name="textFieldBackground">#F5F5F7</color>
+    <color name="languageSelectorBg">#E8F4FF</color>
+    <color name="colorPrimaryLight">#90CAF9</color>
+
+    <color name="primary">#1976D2</color>
+    <color name="primaryDark">#0D47A1</color>
+    <color name="surfaceColor">#FAFAFA</color>
+    <color name="outlineColor">#E0E0E0</color>
+    <color name="dividerColor">#EEEEEE</color>
+    <color name="footerBackground">#F5F5F5</color>
+    <color name="textTertiary">#9E9E9E</color>
+
+    <!-- Couleurs pour le mode sombre (optionnel) -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="gray_dark">#616161</color>
+</resources>

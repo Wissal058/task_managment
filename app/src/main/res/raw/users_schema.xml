@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Définition de l'élément racine -->
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="UserType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Type complexe pour un utilisateur -->
+    <xs:complexType name="UserType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="username" type="UsernameType"/>
+            <xs:element name="password" type="PasswordType"/>
+            <xs:element name="userType" type="UserTypeEnum"/>
+            <xs:element name="email" type="EmailType"/>
+            <xs:element name="fullName" type="xs:string"/>
+            <xs:element name="createdDate" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type pour le nom d'utilisateur (min 3 caractères) -->
+    <xs:simpleType name="UsernameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3"/>
+            <xs:maxLength value="50"/>
+            <xs:pattern value="[a-zA-Z0-9_]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type pour le mot de passe (min 6 caractères) -->
+    <xs:simpleType name="PasswordType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Énumération des types d'utilisateurs -->
+    <xs:simpleType name="UserTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ADMIN"/>
+            <xs:enumeration value="EMPLOYEE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type pour l'email -->
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
