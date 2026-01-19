@@ -209,14 +209,14 @@ public class XMLDatabaseManager {
                 validationStream.close();
 
                 if (isValid) {
-                    Log.i(TAG, "✅ Tasks XML saved and validated successfully");
+                    Log.i(TAG, " Tasks XML saved and validated successfully");
                     return true;
                 } else {
-                    Log.e(TAG, "❌ Tasks XML saved but validation FAILED!");
+                    Log.e(TAG, " Tasks XML saved but validation FAILED!");
                     return false;
                 }
             } catch (Exception e) {
-                Log.e(TAG, "❌ Error validating saved tasks XML: " + e.getMessage());
+                Log.e(TAG, " Error validating saved tasks XML: " + e.getMessage());
                 return false;
             }
         }

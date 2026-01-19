@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Couleurs principales -->
-    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimary">#02477F</color>
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorAccent">#FF5722</color>
 
@@ -60,4 +60,14 @@
     <color name="gray_light">#E0E0E0</color>
     <color name="gray">#9E9E9E</color>
     <color name="gray_dark">#616161</color>
+
+    <!-- Calendar Colors -->
+    <color name="calendar_date_color">#1a1a1a</color>
+    <color name="calendar_weekday_color">#666666</color>
+    <color name="calendar_selected_date">#2196F3</color>
+    <color name="calendar_today_color">#FF9800</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_selected">#2196F3</color>
+    <color name="bottom_nav_unselected">#999999</color>
 </resources>

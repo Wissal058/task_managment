@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <!-- Thème pour le Splash Screen -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_gradient_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Calendar Styles -->
+    <style name="CalendarDateStyle" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/calendar_date_color</item>
+    </style>
+
+    <style name="CalendarWeekDayStyle" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/calendar_weekday_color</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="CalendarSelectedDateStyle" parent="CalendarDateStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/calendar_selected_date_background</item>
+    </style>
+
+</resources>

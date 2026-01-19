@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -13,49 +14,50 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.taskmanagment.R;
 import com.example.taskmanagment.controllers.AuthController;
-import com.example.taskmanagment.controllers.UserController;
 import com.example.taskmanagment.models.User;
 import com.example.taskmanagment.utils.LanguageManager;
-import com.google.android.material.textfield.TextInputEditText;
+import com.example.taskmanagment.views.MainActivity;
 
 /**
  * Activité de connexion
- * View dans l'architecture MVC
  */
 public class LoginActivity extends AppCompatActivity {
 
-    private TextInputEditText etUsername, etPassword;
+    private EditText etUsername, etPassword;
     private Button btnLogin;
     private Spinner spinnerLanguage;
 
     private AuthController authController;
-    private UserController userController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Appliquer la langue AVANT super.onCreate()
         LanguageManager.applyLanguage(this);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Initialiser le contrôleur
         authController = new AuthController(this);
-        userController = new UserController(this);
 
         // Vérifier si déjà connecté
         if (authController.isLoggedIn()) {
-            User currentUser = authController.getCurrentUser();
-            if (currentUser != null) {
-                navigateToDashboard(currentUser);
-                finish();
-                return;
-            }
+            navigateToMainActivity();
+            return;
         }
 
+        // Initialiser les vues
         initViews();
+
+        // Configurer le spinner de langue
         setupLanguageSpinner();
+
+        // Configurer le bouton de connexion
         btnLogin.setOnClickListener(v -> handleLogin());
     }
 
     /**
-     * Initialise les vues
+     * Initialiser les vues
      */
     private void initViews() {
         etUsername = findViewById(R.id.etUsername);
@@ -65,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     /**
-     * Configure le sélecteur de langue
+     * Configurer le spinner de langue
      */
     private void setupLanguageSpinner() {
         String[] languages = {
@@ -89,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             spinnerLanguage.setSelection(0);
         }
 
+        // Changer la langue
         spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -104,28 +107,27 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
     }
 
     /**
-     * Configure les écouteurs d'événements
-     */
-    private void setupListeners() {
-        btnLogin.setOnClickListener(v -> handleLogin());
-    }
-
-    /**
-     * Gère la connexion
+     * Gérer la connexion
      */
     private void handleLogin() {
         String username = etUsername.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
 
-        // Validation des champs
-        if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, R.string.login_empty_fields, Toast.LENGTH_SHORT).show();
+        // Validation
+        if (username.isEmpty()) {
+            etUsername.setError(getString(R.string.field_required));
+            etUsername.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            etPassword.setError(getString(R.string.field_required));
+            etPassword.requestFocus();
             return;
         }
 
@@ -133,29 +135,20 @@ public class LoginActivity extends AppCompatActivity {
         User user = authController.authenticate(username, password);
 
         if (user != null) {
-            Toast.makeText(this, getString(R.string.welcome) + " " + user.getFullName(),
-                    Toast.LENGTH_SHORT).show();
-            navigateToDashboard(user);
-            finish();
+            Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show();
+            navigateToMainActivity();
         } else {
-            Toast.makeText(this, R.string.login_error, Toast.LENGTH_SHORT).show();
-            etPassword.setText("");
+            Toast.makeText(this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show();
         }
     }
 
     /**
-     * Navigue vers le tableau de bord approprié selon le type d'utilisateur
+     * Naviguer vers MainActivity (qui gère les fragments)
      */
-    private void navigateToDashboard(User user) {
-        Intent intent;
-
-        if (user.isAdmin()) {
-            intent = new Intent(this, AdminDashboardActivity.class);
-        } else {
-            intent = new Intent(this, EmployeeDashboardActivity.class);
-        }
-
-        intent.putExtra("user", user);
+    private void navigateToMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+        finish();
     }
 }

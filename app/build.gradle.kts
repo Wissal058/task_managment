@@ -25,7 +25,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    // IMPORTANT : Pour éviter les conflits avec Xerces
     packagingOptions {
         resources {
             excludes += setOf(
@@ -49,6 +48,7 @@ configurations.all {
             }
         }
     }
+    exclude(group = "com.google.guava", module = "listenablefuture")
 }
 
 dependencies {
@@ -59,8 +59,19 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
-    // ✅ Bibliothèque Xerces pour validation XML/XSD sur Android
+    //Support pour Fragments
+    implementation("androidx.fragment:fragment:1.6.2")
+
+    //Navigation Components (optionnel mais recommandé)
+    implementation("androidx.navigation:navigation-fragment:2.7.5")
+    implementation("androidx.navigation:navigation-ui:2.7.5")
+
+    //Bibliothèque grapgique
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    // Xerces pour validation XML
     implementation("xerces:xercesImpl:2.12.2")
+    implementation(libs.compiler)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

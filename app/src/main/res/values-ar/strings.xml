@@ -1,70 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">مدير المهام</string>
+
+    <!-- Splash Screen -->
+    <string name="loading">جارٍ التحميل…</string>
+
+    <!-- Auth -->
     <string name="login">تسجيل الدخول</string>
     <string name="username">اسم المستخدم</string>
     <string name="password">كلمة المرور</string>
-    <string name="dashboard">لوحة القيادة</string>
+    <string name="login_empty_fields">الحقول فارغة</string>
+    <string name="login_error">خطأ في المصادقة</string>
+    <string name="login_failed">فشل تسجيل الدخول</string>
+    <string name="login_success">تم تسجيل الدخول بنجاح</string>
+    <string name="sign_in">دخول</string>
+    <string name="welcome_message">إدارة مهامك بكفاءة</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">لوحة التحكم</string>
+    <string name="welcome">مرحبًا</string>
+    <string name="refresh">تحديث</string>
+    <string name="statistics">الإحصائيات</string>
+    <string name="my_statistics">إحصائياتي</string>
+
+    <!-- Tasks -->
     <string name="tasks">المهام</string>
-    <string name="create_task">إنشاء مهمة</string>
     <string name="task_title">عنوان المهمة</string>
-    <string name="task_description">الوصف</string>
-    <string name="assign_to">تعيين إلى</string>
+    <string name="task_description">وصف المهمة</string>
+    <string name="description">الوصف</string>
     <string name="status">الحالة</string>
+    <string name="priority">الأولوية</string>
+    <string name="all_tasks">جميع المهام</string>
+    <string name="my_tasks">مهامي</string>
+    <string name="no_tasks">لا توجد مهام</string>
+    <string name="no_tasks_for_date">لا توجد مهام لهذا التاريخ</string>
+    <string name="task_not_found">المهمة غير موجودة</string>
+
+    <!-- Task status -->
+    <string name="status_pending">قيد الانتظار</string>
+    <string name="status_in_progress">قيد التنفيذ</string>
+    <string name="status_completed">مكتملة</string>
+    <string name="status_cancelled">ملغاة</string>
+
+    <!-- Task priority -->
+    <string name="priority_low">منخفضة</string>
+    <string name="priority_medium">متوسطة</string>
+    <string name="priority_high">مرتفعة</string>
+    <string name="priority_urgent">عاجلة</string>
+
+    <!-- Dates -->
+    <string name="created_date">تاريخ الإنشاء</string>
+    <string name="due_date">تاريخ الاستحقاق</string>
+    <string name="completed_date">تاريخ الإنهاء</string>
+    <string name="today">اليوم</string>
+    <string name="weekly">أسبوعي</string>
+    <string name="monthly">شهري</string>
+
+    <!-- Task actions -->
+    <string name="start_task">بدء المهمة</string>
+    <string name="complete_task">إنهاء المهمة</string>
+    <string name="cancel_task">إلغاء المهمة</string>
+    <string name="edit_task">تعديل</string>
+    <string name="delete_task">حذف</string>
+    <string name="task_created">تم إنشاء المهمة بنجاح</string>
+    <string name="task_updated">تم تحديث المهمة بنجاح</string>
+    <string name="task_deleted">تم حذف المهمة بنجاح</string>
+    <string name="task_error">حدث خطأ في المهمة</string>
+
+    <!-- Users -->
+    <string name="users">المستخدمون</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="user_type">نوع المستخدم</string>
+    <string name="assigned_to">مُعيّنة إلى</string>
+    <string name="created_by">أُنشئت بواسطة</string>
+    <string name="select_user">اختر مستخدمًا</string>
+    <string name="all_users">جميع المستخدمين</string>
+    <string name="total_users">إجمالي المستخدمين</string>
+    <string name="total_employees">إجمالي الموظفين</string>
+
+    <!-- Admin -->
+    <string name="admin">مشرف</string>
+    <string name="admin_dashboard">لوحة تحكم المشرف</string>
+    <string name="global_statistics">إحصائيات عامة</string>
+    <string name="distribution_analysis">تحليل التوزيع</string>
+    <string name="workload_by_employee">عبء العمل حسب الموظف</string>
+    <string name="monthly_trend">الاتجاه الشهري</string>
+
+    <!-- Charts -->
+    <string name="tasks_by_status">المهام حسب الحالة</string>
+    <string name="tasks_by_priority">المهام حسب الأولوية</string>
+    <string name="tasks_per_employee">المهام لكل موظف</string>
+    <string name="tasks_created_per_month">المهام المنشأة شهريًا</string>
+    <string name="priority_distribution">توزيع الأولويات</string>
+    <string name="tasks_by_employee">المهام حسب الموظف</string>
+
+    <!-- Navigation -->
+    <string name="navigation_drawer_open">فتح القائمة</string>
+    <string name="navigation_drawer_close">إغلاق القائمة</string>
+    <string name="home">الرئيسية</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="account">الحساب</string>
+    <string name="settings">الإعدادات</string>
+    <string name="about">حول التطبيق</string>
+
+    <!-- Settings -->
+    <string name="language">اللغة</string>
+    <string name="select_language">اختر اللغة</string>
+    <string name="french">الفرنسية</string>
+    <string name="arabic">العربية</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="feature_coming_soon">الميزة قيد التطوير</string>
+
+    <!-- Dialogs -->
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="confirm_logout">هل تريد تسجيل الخروج؟</string>
+    <string name="confirm_delete">هل أنت متأكد من الحذف؟</string>
+    <string name="confirm_delete_task">هل أنت متأكد من حذف هذه المهمة؟</string>
+
+    <!-- Create task -->
+    <string name="create">إنشاء</string>
+    <string name="save">حفظ</string>
+    <string name="update">تحديث</string>
+    <string name="cancel">إلغاء</string>
+    <string name="select_employee">اختر موظفًا</string>
+    <string name="select_priority">اختر الأولوية</string>
+    <string name="select_due_date">اختر تاريخ الاستحقاق</string>
+    <string name="fill_task_details">املأ تفاصيل المهمة</string>
+    <string name="field_required">هذا الحقل مطلوب</string>
+    <string name="fill_all_fields">يرجى ملء جميع الحقول</string>
+
+    <!-- Filters -->
+    <string name="search">بحث</string>
+    <string name="search_filter">بحث</string>
+    <string name="filter">تصفية</string>
+    <string name="sort">ترتيب</string>
+    <string name="from_date">من تاريخ</string>
+    <string name="to_date">إلى تاريخ</string>
+    <string name="apply">تطبيق</string>
+    <string name="reset">إعادة تعيين</string>
+    <string name="all_priorities">جميع الأولويات</string>
+
+    <!-- Calendar -->
+    <string name="calendar">التقويم</string>
+
+    <!-- Actions -->
+    <string name="actions">الإجراءات</string>
+    <string name="more">المزيد</string>
+    <string name="info">معلومات</string>
+
+    <!-- Misc -->
     <string name="logout">تسجيل الخروج</string>
-    <string name="welcome">Bienvenue</string>
-    <string name="refresh">actualiser</string>
-    <string name="profile">profile</string>
-    <string name="settings">paramètres</string>
-    <string name="confirm_logout">voulez-vous vous déconnecter ?</string>
-    <string name="yes">oui</string>
-    <string name="no">Non</string>
-    <string name="edit_task">modifier</string>
-    <string name="update">modifier</string>
-    <string name="field_required">Champ obligatoire</string>
-    <string name="select_user">Séléctionner utilisateur</string>
-    <string name="select_date">Séléctionner date</string>
-    <string name="task_updated_success">Tâche modifiée avec succès</string>
-    <string name="task_created_success">Tâche créée avec succès</string>
-    <string name="task_error">Erreur de tâche</string>
-    <string name="full_name">Nom Complet</string>
-    <string name="email">Email</string>
-    <string name="user_type">Type d\'utilisateur</string>
-    <string name="no_tasks">Aucune tâche</string>
-    <string name="sort">Trier</string>
-    <string name="priority">Priorité</string>
-    <string name="filter">Filtrer</string>
-    <string name="french">Français</string>
-    <string name="arabic">Arabe</string>
-    <string name="login_empty_fields">Les champs sont vides</string>
-    <string name="login_error">Erreur d\'authentification</string>
-    <string name="all_tasks">Toutes les tâches</string>
-    <string name="my_tasks">Mes tâches</string>
-    <string name="created_date">Date de création</string>
-    <string name="due_date">Date d\'échéance</string>
-    <string name="language">Language</string>
-    <string name="statistics">Statistiques</string>
-    <string name="total_tasks">Total des tâches</string>
-    <string name="pending_tasks">Tâcches en attente</string>
-    <string name="in_progress_tasks">Tâches en cours</string>
-    <string name="completed_tasks">Tâches términées</string>
-    <string name="total_users">Total des utilisateurs</string>
-    <string name="total_employees">Total des employés</string>
-    <string name="users">Utilisateurs</string>
-    <string name="create">Créer</string>
-    <string name="cancel">Annuler</string>
-    <string name="overdue_tasks">Tâches échéancées</string>
-    <string name="sign_in">Se connecter</string>
-    <string name="completed_date">Date complète</string>
-    <string name="created_by">Créée par</string>
-    <string name="start_task">Commencer la tâche</string>
-    <string name="complete_task">Commencer la tâche</string>
-    <string name="cancel_task">Annuler la tâche</string>
-    <string name="admin">Administrateur</string>
-    <string name="delete_task">Supprimer la tâche</string>
-    <string name="app_tagline">Welcome back!</string>
-    <string name="copyright">© 2024 Your App. All rights reserved.</string>
-    <string name="app_subtitle">Enterprise Login Portal</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="terms_privacy">Terms of Service • Privacy Policy</string>
+    <string name="logout_success">تم تسجيل الخروج بنجاح</string>
+    <string name="access_denied">تم رفض الوصول</string>
+    <string name="weekly_tasks">المهام الأسبوعية</string>
+    <string name="overdue">متأخرة</string>
+    <string name="overdue_tasks">مهام متأخرة</string>
+    <string name="member_since">عضو منذ</string>
+    <string name="completion_rate">نسبة الإنجاز</string>
+    <string name="app_version">الإصدار 1.0.0</string>
+    <string name="task_creation_note">💡 نصيحة: تأكد من تحديد موعد نهائي مناسب وتعيين المهمة للشخص الصحيح.</string>
 </resources>
